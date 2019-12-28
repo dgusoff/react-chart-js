@@ -1,25 +1,18 @@
 import React from 'react';
 import './scss/app.scss';
 
+import {Header} from './components/header/Header';
+
 const App: React.FC = () => {
   return (
     <div className="app">
-      <header className="App-header">
+      <Header />
        
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        </p>       
+     
     </div>
   );
 }
-
 export default App;
