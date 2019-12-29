@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { SimpleLineChart } from './../LineCharts/SimpleLineChart';
+import { LineChartWithOptions } from './../LineCharts/LineChartWithOptions';
 export class Header extends React.Component {
     public render(): React.ReactElement {
         return (
@@ -17,10 +18,10 @@ export class Header extends React.Component {
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Line Charts
-        </a>
+                                </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <Link className="dropdown-item" to={`/linechart1`}>Example 0</Link>
-                                    <a className="dropdown-item" href="http://bing.com">Example 2</a>
+                                    <Link className="dropdown-item" to={`/linechart1`}>Simple Line Chart</Link>
+                                    <Link className="dropdown-item" to={`/linechart2`}>Line Chart with options</Link>
                                     <a className="dropdown-item" href="http://bing.com">Example 2</a>
                                     <a className="dropdown-item" href="http://bing.com">Example 3</a>
                                 </div>
@@ -29,6 +30,7 @@ export class Header extends React.Component {
                     </div>
                 </nav>
                 <Route exact path={`/linechart1`} render={(props) => <SimpleLineChart />} />
+                <Route exact path={`/linechart2`} render={(props) => <LineChartWithOptions />} />
             </Router>
         );
     }
