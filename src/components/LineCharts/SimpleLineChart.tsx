@@ -5,8 +5,8 @@ export class SimpleLineChart extends React.Component {
 
     componentDidMount() {
         const canvas = this.refs.myCanvas as HTMLCanvasElement;
-
         const ctx = canvas.getContext("2d");
+        
         if (ctx != null) {
             new Chart(ctx, {
                 type: "line",
